@@ -20,8 +20,8 @@ const ContactForm = () => {
       <form autoComplete='off' onSubmit={sendEmail}>
         <div className='flex gap-5 items-center'>
           <div className='flex-1' >
-            <label htmlFor="user-name" className='text-zinc-800'>Name</label>
-            <input type="text" name="user-name" id="user-name" placeholder='Name' className='border-1 border-zinc-300 w-full bg-zinc-100 h-11 pl-3 mt-2 text-sm  focus:outline-blue-600  rounded-lg' />
+            <label htmlFor="user-name" className='text-zinc-800' required >Name</label>
+            <input type="text" name="user-name" id="user-name" placeholder='Name' required className='border-1 border-zinc-300 w-full bg-zinc-100 h-11 pl-3 mt-2 text-sm  focus:outline-blue-600  rounded-lg' />
           </div>
           <div className='flex-1' >
             <label htmlFor="user-email" className='text-zinc-800'>Email</label>
@@ -30,11 +30,11 @@ const ContactForm = () => {
         </div>
          <div className='mt-3' >
             <label htmlFor="user-subject" className='text-zinc-800'>Subject</label>
-            <input type="text" name="user-subject" id="user-subject" placeholder='Subject' className='border-1 border-zinc-300 w-full bg-zinc-100 h-11 pl-3 mt-2 text-sm  focus:outline-blue-600 rounded-lg ' />
+            <input type="text" name="user-subject" id="user-subject" placeholder='Subject'  required className='border-1 border-zinc-300 w-full bg-zinc-100 h-11 pl-3 mt-2 text-sm  focus:outline-blue-600 rounded-lg ' />
           </div>
 
            <div className='mt-3' >
-            <label htmlFor="user-message" className='text-zinc-800'>Message</label>
+            <label htmlFor="user-message" className='text-zinc-800' required>Message</label>
            <textarea name="message" id="message" rows={5} placeholder='Type Your Message Here'  className='border-1 border-zinc-300 w-full bg-zinc-100  p-3 mt-2 text-sm  focus:outline-blue-600 rounded-lg resize-none' >
            
            </textarea>
