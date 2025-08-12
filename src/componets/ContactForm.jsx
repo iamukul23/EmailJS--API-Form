@@ -1,9 +1,23 @@
-import React from 'react'
+import React , {useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const ContactForm = () => {
+const fromData= useRef('')
+
   const sendEmail=(e)=>{
     e.preventDefault();
 
+    emailjs.sendForm("service_5x1w8zo","template_g67qer7",fromData.current,"KWsn-biekKRPf-nU-").then(
+      ()=>{
+      alert("Message send succesfully ");
+      fromData.current.reset();
+
+    },
+    (error)=>{
+      alert("Failed to send message");
+      console.error(error.text);
+    }
+  )
   }
 
 
@@ -17,7 +31,7 @@ const ContactForm = () => {
           we are here to Help. send us message and we will get to you soon.
         </p>
       </div>
-      <form autoComplete='off' onSubmit={sendEmail}>
+      <form autoComplete='off' ref={fromData} onSubmit={sendEmail}>
         <div className='flex gap-5 items-center'>
           <div className='flex-1' >
             <label htmlFor="user-name" className='text-zinc-800' required >Name</label>
@@ -34,7 +48,7 @@ const ContactForm = () => {
           </div>
 
            <div className='mt-3' >
-            <label htmlFor="user-message" className='text-zinc-800' required>Message</label>
+            <label htmlFor="message" className='text-zinc-800' required>Message</label>
            <textarea name="message" id="message" rows={5} placeholder='Type Your Message Here'  className='border-1 border-zinc-300 w-full bg-zinc-100  p-3 mt-2 text-sm  focus:outline-blue-600 rounded-lg resize-none' >
            
            </textarea>
