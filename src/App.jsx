@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import ContactForm from "./components/ContactForm";
+import ContactForm from './components/contactform';
+
 
 const App = () => {
 const [notification , setNotification]=useState('');
@@ -16,7 +17,6 @@ const [notification , setNotification]=useState('');
   )
 
 }
-
 
    <ContactForm setNotification={setNotification} />
     </div>
