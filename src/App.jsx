@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ContactForm from './components/contactform';
+import ContactFormH from './components/ContactFormH';
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const [notification , setNotification]=useState('');
 
 }
 
-   <ContactForm setNotification={setNotification} />
+   <ContactFormH setNotification={setNotification} />
     </div>
   )
 }

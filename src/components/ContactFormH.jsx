@@ -1,7 +1,7 @@
 import React , {useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-const ContactForm = ({setNotification}) => {
+const ContactFormH = ({setNotification}) => {
 const fromData= useRef('')
 
   const sendEmail=(e)=>{
@@ -18,6 +18,7 @@ const fromData= useRef('')
       setNotification("Failed to send message");
       setTimeout(() => setNotification('') , 3000);
       console.error(error.text);
+      console.log("hh")
     }
   )
   }
@@ -64,4 +65,4 @@ const fromData= useRef('')
   )
 }
 
-export default ContactForm
+export default ContactFormH;
