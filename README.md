@@ -20,10 +20,6 @@ EmailJS--API-Form/
 │-- eslint.config.js # ESLint configuration
 │-- .gitignore # Ignored files
 
-yaml
-Copy code
-
----
 
 ## ⚡ Getting Started
 
@@ -32,12 +28,14 @@ Copy code
 git clone https://github.com/iamukul23/EmailJS--API-Form.git
 cd EmailJS--API-Form
 2️⃣ Install dependencies
-bash
-Copy code
+
+
+
 npm install
 3️⃣ Run the development server
-bash
-Copy code
+
+
+
 npm run dev
 Then open http://localhost:5173 in your browser.
 
